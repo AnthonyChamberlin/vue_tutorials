@@ -1,0 +1,20 @@
+.nearby {
+    background: orange;
+    width: 150px;
+    text-align: center;
+    padding: 20px;
+    color: #ccc;
+}
+
+.nearby:after {
+    content: 'is Nearby';
+    margin-left: 10px;
+}
+
+.available {
+    background: green;
+    width: 150px;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+}
