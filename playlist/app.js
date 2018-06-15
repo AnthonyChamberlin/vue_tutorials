@@ -1,9 +1,12 @@
 new Vue({
     el: '#vue-app',
-    data: { name: 'Ant' },
+    data: { 
+        name: 'Ant',
+        job: 'Front-end Web Developer',
+    },
     methods: {
-        returnName: function() {
-            return this.name;
+        greet: function(time) {
+            return 'Good ' + time + ', ' + this.name + '!';
         }
     }
 });
