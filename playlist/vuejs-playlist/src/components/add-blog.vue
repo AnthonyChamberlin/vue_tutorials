@@ -7,6 +7,16 @@
             
             <label>Blog Content:</label>
             <textarea v-model="blog.content"></textarea>
+            <div id="checkboxes">
+                <label>Ninjas</label>
+                <input type="checkbox" value="Ninjas" v-model="blog.categories" />
+                <label>Wizards</label>
+                <input type="checkbox" value="Wizards" v-model="blog.categories" />
+                <label>Mario</label>
+                <input type="checkbox" value="Mario" v-model="blog.categories" />
+                <label>Cheese</label>
+                <input type="checkbox" value="Cheese" v-model="blog.categories" /> 
+            </div>
         </form>
 
         <h3>Preview</h3>
@@ -14,6 +24,9 @@
         <div id="preview">
             <h4>{{ blog.title }}</h4>
             <p>{{ blog.content }}</p>
+            <ul>
+                <li v-bind:v-for="category in blog.categories">{{ category }}</li>
+            </ul>
         </div>
     </div>
 </template>
@@ -29,6 +42,7 @@ export default {
             blog: {
                 title: "",
                 content: "",
+                categories: [],
             },
         }
     },
@@ -48,7 +62,7 @@ export default {
 }
 
 #add-blog textarea {
-    height: 450px;
+    height: 150px;
 }
 
 label {
@@ -67,5 +81,14 @@ input[type="text"], textarea {
 }
 h3 {
     margin-top: 10px;
+}
+
+#checkboxes input {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#checkboxes label {
+    display: inline-block;
 }
 </style>
