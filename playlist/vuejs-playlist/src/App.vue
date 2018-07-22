@@ -25,11 +25,11 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700');
 body {
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: 'Lato', sans-serif;
     font-size: 18px;
-    color: #202020;
+    font-weight: 100;
 }
 </style>
