@@ -7,8 +7,6 @@
             
             <label>Blog Content:</label>
             <textarea v-model="blog.content"></textarea>
-
-            <label>Blog Categories:</label>
             <div id="checkboxes">
                 <label>Ninjas</label>
                 <input type="checkbox" value="Ninjas" v-model="blog.categories" />
@@ -19,11 +17,6 @@
                 <label>Cheese</label>
                 <input type="checkbox" value="Cheese" v-model="blog.categories" /> 
             </div>
-
-            <label>Blog Authors:</label>
-            <select v-model="blog.author">
-                <option v-for="author in authors">{{ author }}</option>
-            </select>
         </form>
 
         <h3>Preview</h3>
@@ -32,9 +25,8 @@
             <h4>{{ blog.title }}</h4>
             <p>{{ blog.content }}</p>
             <ul>
-                <li v-for="category in blog.categories">{{ category }}</li>
+                <li v-bind:v-for="category in blog.categories">{{ category }}</li>
             </ul>
-            <p>Author: {{ blog.author }}</p>
         </div>
     </div>
 </template>
@@ -51,9 +43,7 @@ export default {
                 title: "",
                 content: "",
                 categories: [],
-                author: '',
             },
-            authors: ['Joe Chamberlin', 'Anthony Chamberlin', 'Ben Chamberlin'],
         }
     },
     methods: {
@@ -69,6 +59,10 @@ export default {
 #add-blog {
     margin: 20px auto;
     max-width: 500px;
+}
+
+#add-blog textarea {
+    height: 150px;
 }
 
 label {
