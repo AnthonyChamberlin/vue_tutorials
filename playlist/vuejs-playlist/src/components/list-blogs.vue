@@ -1,6 +1,6 @@
 <template>
     <div id="show-blogs">
-        <h1>All Blog Articles</h1>
+        <h1>List Blog Articles</h1>
         <input
             id="search-box"
             type="text"
@@ -30,7 +30,7 @@ export default {
             this.blogs = data.body.slice(0,10);
         });
     },
-
+    
     filters: {
         /*'to-uppercase': function(value){
             return value.toUpperCase();
